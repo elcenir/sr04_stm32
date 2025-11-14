@@ -1,6 +1,11 @@
-connections for bluepill
-PA8 to sr-04 echo pin
-PA10 to sr-04 trig pin
+connections for bluepill :
+
+- PA8 to sr-04 echo pin
+
+- PA10 to sr-04 trig pin
+
+
+get it to run :
 
 1. include sr04.h in main.c
 
