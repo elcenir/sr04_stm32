@@ -85,18 +85,11 @@ void sr04_init(void){
 
 void TIM1_CC_IRQHandler(void){
 
-	if( (TIM1->DIER & TIM_DIER_CC1IE) && (TIM1->SR & TIM_SR_CC1IF)){
-			TIM1->SR = ~TIM_SR_CC1IF;}
-
 	if( (TIM1->DIER & TIM_DIER_CC2IE) && (TIM1->SR & TIM_SR_CC2IF)){
 			TIM1->SR = ~TIM_SR_CC2IF;
 			sr04_callback();}
 
-	if( (TIM1->DIER & TIM_DIER_CC3IE) && (TIM1->SR & TIM_SR_CC3IF)){
-			TIM1->SR = ~TIM_SR_CC3IF;}
-
-	if( (TIM1->DIER & TIM_DIER_CC4IE) && (TIM1->SR & TIM_SR_CC4IF)){
-			TIM1->SR = ~TIM_SR_CC4IF;}
 }
+
 
 
