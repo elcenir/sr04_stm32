@@ -24,7 +24,7 @@
 #include "sr04.h"
 
 //this variable stores the measured distance by SR-04
-float dis;
+float sr04_dis;
 
 
 /*
@@ -103,7 +103,7 @@ void sr04_init(void){
  */
 
 void sr04_callback(void){
-	dis =  (float)( TIM1->CCR2 - TIM1->CCR1 ) * 0.034f ;
+	sr04_dis =  (float)( TIM1->CCR2 - TIM1->CCR1 ) * 0.034f ;
 }
 
 
@@ -129,5 +129,6 @@ void TIM1_CC_IRQHandler(void){
 			sr04_callback();}
 
 }
+
 
 
